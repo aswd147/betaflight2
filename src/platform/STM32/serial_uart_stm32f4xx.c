@@ -49,17 +49,17 @@ const uartHardware_t uartHardware[UARTDEV_COUNT] = {
         .rxDMAChannel = DMA_Channel_4,
         .txDMAChannel = DMA_Channel_4,
 #ifdef USE_UART1_RX_DMA
-        .rxDMAResource = (dmaResource_t *)DMA2_Stream5,
+        .rxDMAResource = (dmaResource_t *)DMA1_Stream5,
 #endif
 #ifdef USE_UART1_TX_DMA
-        .txDMAResource = (dmaResource_t *)DMA2_Stream7,
+        .txDMAResource = (dmaResource_t *)DMA1_Stream6,
 #endif
-        .rxPins = { { DEFIO_TAG_E(PA10) }, { DEFIO_TAG_E(PB7) },
+        .rxPins = { { DEFIO_TAG_E(PA10) }, { DEFIO_TAG_E(PD6) },
 #if defined(STM32F411xE)
             { DEFIO_TAG_E(PB3) },
 #endif
             },
-        .txPins = { { DEFIO_TAG_E(PA9) }, { DEFIO_TAG_E(PB6) },
+        .txPins = { { DEFIO_TAG_E(PA9) }, { DEFIO_TAG_E(PD5) },
 #if defined(STM32F411xE)
             { DEFIO_TAG_E(PA15) },
 #endif
